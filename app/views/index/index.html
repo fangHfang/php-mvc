@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport"
+          content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>零食铺</title>
+    <link rel="stylesheet" href="{CSS_PATH}index.css">
+    <link rel="stylesheet" href="{CSS_PATH}swiper.css">
+    <link rel="stylesheet" href="{CSS_PATH}public.css">
+    <script src="{JS_PATH}rem.js"></script>
+    <link rel="icon" href="images/logo.png" type="images/x-icon">
+</head>
+<body>
+<!-- head部分 -->
+<div class="head">
+    <dic class="head1">
+        <span>&#xe655;</span>
+    </dic>
+    <dic class="head2">
+        <img src="{IMG_PATH}/Screenshot_2018-02-24-14-12-26-95_04.png" alt="">
+    </dic>
+    <dic class="head3">
+        <span>&#xe627;</span>
+    </dic>
+</div>
+
+<!-- banner部分 -->
+<div class="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{IMG_PATH}banner1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{IMG_PATH}banner2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{IMG_PATH}banner3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{IMG_PATH}banner4.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{IMG_PATH}banner5.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <!--<div class="swiper-pagination"></div>-->
+</div>
+
+<!-- tit部分 -->
+<div class="tit">
+    {foreach $data $v}
+    <a href="index.php?m=index&c=commodity&cid={$v['cid']}" class="tit2">
+        <img src="{$v['cthumb']}" alt="">
+        <span>{$v['cname']}</span>
+    </a>
+    {/foreach}
+</div>
+
+<!-- 内容 -->
+<div class="content">
+    <div class="content1">
+        <div class="content2">
+            <p>&#xe668;</p>
+        </div>
+        <div class="content3">
+            <p>店铺头条</p>
+        </div>
+        <div class="content4">
+            <div class="content5"></div>
+            <p>爽食莆APP上线了</p>
+        </div>
+    </div>
+    <div class="content_down">
+        <img src="{IMG_PATH}/75-02_02.png" alt="">
+    </div>
+</div>
+
+<!-- 种类特色 -->
+<div class="main">
+    <div class="main_up">
+        <div class="main_tit">
+            <div class="main_tit_box">
+                <img src="{IMG_PATH}/Screenshot_2018-02-24-14-12-51-75_03.png" alt="">
+            </div>
+            <div class="main_tit_box1">
+                <p>海鲜干货</p>
+            </div>
+            <div class="main_tit_box2">
+                <p>更多</p>
+            </div>
+        </div>
+    </div>
+    <div class="main_down">
+        {foreach $typedata $v}
+        <div class="main_down1">
+            <img src="{$v['thumb']}" alt="">
+        </div>
+        {/foreach}
+
+    </div>
+</div>
+
+<!-- 热卖商品 -->
+<div class="hot">
+    <div class="main_up">
+        <div class="main_tit">
+            <div class="main_tit_box">
+                <img src="{IMG_PATH}/Screenshot_2018-02-24-14-12-51-75_03.png" alt="">
+            </div>
+            <div class="main_tit_box1">
+                <p>特色小吃</p>
+            </div>
+            <div class="main_tit_box2">
+                <p>更多</p>
+            </div>
+        </div>
+    </div>
+    <div class="hot_down">
+        {foreach $goodsdata $v}
+        <div class="hot_down_img">
+            <img src="{$v['gthumb']}" alt="">
+            <p>{$v['gdescrip']}&nbsp;（10斤）</p>
+            <h1>{$v['gprice']}</h1>
+            <div class="hot_down_img1">
+                <span>&#xe618;</span>
+            </div>
+        </div>
+        {/foreach}
+    </div>
+</div>
+
+<div class="footer0"></div>
+
+<!-- footer部分 -->
+{include file="index/footer.html"}
+<script src="{JS_PATH}swiper.js"></script>
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        speed:300,
+        autoplay: true,
+    });
+</script>

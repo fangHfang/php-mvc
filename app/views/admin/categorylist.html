@@ -1,0 +1,54 @@
+{include file="admin/header.html"}
+<style>
+    td>img{
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+    }
+</style>
+<body>
+<form method="post" action="" id="listform">
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorder">分类列表</strong>
+            <!--<a href="" style="float:right; display:none;">添加字段</a>-->
+        </div>
+        <div class="padding border-bottom">
+            <ul class="search" style="padding-left:10px;">
+                <li><a class="button border-main icon-plus-square-o" href="index.php?m=admin&c=category&a=categoryadd"> 添加分类</a></li>
+            </ul>
+        </div>
+        <table class="table table-hover text-center">
+            <tr>
+                <th>分类ID</th>
+                <th>分类名</th>
+                <th>图片</th>
+                <th>排序</th>
+                <th>操作</th>
+            </tr>
+            {foreach $data $v}
+            <tr>
+                <td>{$v['cid']}</td>
+                <td>{$v['cname']}</td>
+                <td><img src="{$v['cthumb']}" alt=""></td>
+                <td>{$v['corder']}</td>
+                <td>
+                    <div class="button-group">
+                        <a class="button border-main" href="index.php?m=admin&c=category&a=updatecategory&id={$v['cid']}"><span class="icon-edit"></span> 修改</a>
+                        <a class="button border-red" href="index.php?m=admin&c=category&a=delcategory&id={$v['cid']}" onclick="return del(1,1,1)"><span class="icon-trash-o"></span> 删除</a></div>
+                </td>
+            </tr>
+            {/foreach}
+            <tr>
+                <td colspan="7">
+                    <div class="pagelist">
+                        {$str}
+                    </div>
+                        <!--<span class="current">1</span><a href="">2</a>-->
+                        <!--<a href="">3</a>-->
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>

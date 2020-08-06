@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有商品</title>
+    <link rel="stylesheet" href="{CSS_PATH}/showlist.css">
+    <link rel="stylesheet" href="{CSS_PATH}/public.css">
+    <link rel="icon" href="{IMG_PATH}/logo.png" type="images/x-icon">
+    <script src="{JS_PATH}/rem.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="head0" onclick="history.back();">
+        <p> < </p>
+    </div>
+    <div class="head1">
+        <p>所有商品</p>
+    </div>
+    <div class="head2">
+        <p>&#xe627;</p>
+    </div>
+</div>
+<div class="tit" id="{$tid}">
+    <div class="tit1">
+        <p class="tit2">&#xe6e2;</p>
+        <div class="tit3">
+            <span>分类</span>
+        </div>
+    </div>
+
+    <div class="tit1">
+        <div class="tit2">
+            <p class="tit21">&#xe730;</p>
+            <p class="tit21">&#xe649;</p>
+        </div>
+        <span class="tit3">新品</span>
+    </div>
+    <div class="tit1 price">
+        <div class="tit2">
+            <p class="tit21">&#xe730;</p>
+            <p class="tit21">&#xe649;</p>
+        </div>
+        <span class="tit3">价格</span>
+    </div>
+    <div class="tit1">
+        <div class="tit2">
+            <p class="tit21">&#xe730;</p>
+            <p class="tit21">&#xe649;</p>
+        </div>
+        <span class="tit3">销量</span>
+    </div>
+    <div class="tit1 tit0">
+        <span>&#xe630;</span>
+    </div>
+</div>
+
+<div class="hot_down">
+    {foreach $data $v}
+    <a href="index.php?m=index&c=product&a=product&id={$v['tid']}" class="hot_down_img">
+        <img src="{$v['gthumb']}" alt="">
+        <p>{$v['gdescrip']}&nbsp;（10斤）</p>
+        <h1>￥{$v['gprice']}</h1>
+        <div class="hot_down_img1">
+            <span>&#xe618;</span>
+        </div>
+    </a>
+    {/foreach}
+</div>
+
+<div class="footer0"></div>
+
+<!-- footer部分 -->
+{include file="index/footer.html"}
+<script src="{JS_PATH}/jquery.js"></script>
+<script src="{JS_PATH}/getgoods.js"></script>

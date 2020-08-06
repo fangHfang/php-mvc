@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有商品</title>
+    <link rel="stylesheet" href="{CSS_PATH}/commodity.css">
+    <link rel="stylesheet" href="{CSS_PATH}/public.css">
+    <link rel="icon" href="{IMG_PATH}/logo.png" type="images/x-icon">
+    <script src="{JS_PATH}/rem.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="head0" onclick="history.back();">
+        <p> < </p>
+    </div>
+    <div class="head1">
+        <p>所有商品</p>
+    </div>
+    <div class="head2">
+        <p>&#xe627;</p>
+    </div>
+</div>
+<div class="cont">
+    <div class="cont_type">
+        {foreach $data $v}
+        {if $cid==$v['cid']}
+        <p style="color: #66a5ec" data-id="{$v['cid']}"><a href="index.php?m=index&c=commodity&a=types&cid={$v['cid']}"></a>{$v['cname']}</p>
+        {else}
+        <p data-id="{$v['cid']}">{$v['cname']}</p>
+        {/if}
+        {/foreach}
+    </div>
+    <div class="cont_main">
+        {foreach $type $v }
+        <a href="index.php?m=index&c=commodity&a=showlist&id={$v['tid']}" class="hot_down_img">
+            <img src="{$v['thumb']}" alt="">
+            <p>{$v['tname']}&nbsp;（10斤）</p>
+            <em>￥{$v['tprice']}</em>
+            <div class="hot_down_img1">
+                <span></span>
+            </div>
+        </a>
+        {/foreach}
+    </div>
+</div>
+
+
+<div class="footer0"></div>
+{include file="index/footer.html"}
+<script src="{JS_PATH}/jquery.js"></script>
+<script src="{JS_PATH}/gettype.js"></script>

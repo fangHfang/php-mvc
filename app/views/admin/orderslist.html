@@ -1,0 +1,57 @@
+{include file="admin/header.html"}
+<style>
+    td>img{
+        width: 50px;
+        height: auto;
+        borders-radius: 50%;
+    }
+</style>
+<body>
+<form method="post" action="" id="listform">
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorders"> 订单列表</strong>
+        </div>
+        <div class="padding border-bottom">
+            <ul class="search" style="padding-left:10px;">
+                <li><a class="button border-main icon-plus-square-o" href="index.php?m=admin&c=orders&a=addorders"> 添加分类</a></li>
+            </ul>
+        </div>
+        <table class="table table-hover text-center">
+            <tr>
+                <th width="50px">ID</th>
+                <th width="80px">商品名称</th>
+                <th width="80px">商品个数</th>
+                <th width="100px">商品总价</th>
+                <th width="150px">用户ID</th>
+                <th width="100px">用户地址</th>
+                <th width="80px">订单状态</th>
+                <th width="170px">操作</th>
+            </tr>
+            {foreach $data $v}
+            <tr>
+                <td>{$v['oid']}</td>
+                <td>{$v['gid']}</td>
+                <td>{$v['gnumber']}</td>
+                <td>{$v['gprice']}</td>
+                <td>{$v['uid']}</td>
+                <td>{$v['aid']}</td>
+                <td>{$v['ostate']}</td>
+                <td>
+                    <div class="button-group">
+                        <a class="button border-main" href="index.php?m=admin&c=orders&a=ordersupdate&id={$v['gid']}"><span class="icon-edit"></span> 修改</a>
+                        <a class="button border-red" href="index.php?m=admin&c=orders&a=delorders&id={$v['gid']}" onclick="return del(1,1,1)"><span class="icon-trash-o"></span> 删除</a></div>
+                </td>
+            </tr>
+            {/foreach}
+            <tr>
+                <td colspan="7">
+                    <div class="pagelist">
+                        {$str}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>

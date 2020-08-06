@@ -1,0 +1,164 @@
+body::-webkit-scrollbar-track {
+	display: none;
+	}
+.header{
+    width: 100%;
+    height: 1.45rem;
+	background: #fff;
+    border-bottom:0.01rem solid #bbb;
+    line-height: 1.5rem;
+    text-align: center;
+	position: fixed;
+}
+.ch{
+	width: 100%;
+	height: 1.46rem;
+}
+.header p{
+    color:#6e6e6e;
+    font-size: 0.5rem;
+}
+.box1{
+	margin-top: 0.1rem;
+}
+.box2{
+	width: 100%;
+	height: 1.34rem;
+	background-color: #f4f4f4;
+	border-top: 0.01rem solid #bdbdbd;
+}
+.box21{
+	width: 3.6rem;
+	height: 100%;
+	background-color: #f4f4f4;
+	float: left;
+}
+.box22{
+	width: 3.6rem;
+	height: 100%;
+	background-color: #afcee6;
+	text-align: center;
+	line-height: 1.34rem;
+	float: left;
+}
+.box23{
+	width: 3.6rem;
+	height: 100%;
+	background-color: #ea7986;
+	text-align: center;
+	line-height: 1.34rem;
+	float: left;
+}
+.box22 p,.box23 p{
+	color: #fff;
+	font-size: 0.34rem;
+}
+.box211{
+	width: 1.8rem;
+	height: 100%;
+	float: left;
+	text-align: center;
+	padding: 0.05rem 0rem;
+}
+.box211 p{
+	font-family: 'iconfont'; 
+	color: #9d9d9d;
+	font-size: 0.4rem;
+}
+.box211 .box2111{
+	font-size: 0.6rem;
+}
+.add{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom:0;
+	z-index: 2;
+	display: none;
+}
+.delete {
+	width: 100%;
+	height: 0.8rem;
+}
+.delete p{
+	width: 0.8rem;
+	height: 0.8rem;
+	float: right;
+	margin-top: 0;
+	margin-right: 0.2rem;
+	font-size: 0.5rem;
+	color: #ff0036;
+	text-align: center;
+	line-height: 0.8rem;
+	border: 0.05rem solid #ff0036;
+	border-radius: 50%;
+}
+.add_item{
+	width: 100%;
+	height: 3.7rem;
+	background: #fff;
+	padding:0.34rem;
+	border-bottom:0.01rem solid #bcbcbc;
+}
+.item_pic{
+	width: 3rem;
+	height: 3rem;
+	float: left;
+}
+.item_pic_dec{
+	float: left;
+	font-size: 0.42rem;
+	line-height: 0.7rem;
+	color: #595959;
+	padding:0.5rem;
+}
+.item_pic_dec em{
+	color: #ea7986;
+	font-size: 0.5rem;
+}
+.kucun{
+	width: 100%;
+	height: 1.8rem;
+	padding:0.5rem 0.34rem;
+	background: #fff;
+}
+.count{
+	width: 3rem;
+	height: 1rem;
+	float: left;
+}
+.count p{
+	width: 1.2rem;
+	height: 0.8rem;
+	float: left;
+	margin-left: 0;
+	border:0.01rem solid #595959;
+	text-align: center;
+	line-height: 0.6rem;
+}
+.count p:first-child{
+	 width: 0.8rem;
+	 height: 0.8rem;
+ }
+.count p:last-child{
+	width: 0.8rem;
+	height: 0.8rem;
+}
+.kucun p{
+	display: block;
+	float: left;
+	line-height: 0.8rem;
+	font-size: 0.45rem;
+	color: #595959;
+	margin-top: 0;
+}
+.sure{
+	width: 100%;
+	height: 1rem;
+	background: #ea7986;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.5rem;
+	font-family: '微软雅黑 Light';
+	color: #fff;
+}

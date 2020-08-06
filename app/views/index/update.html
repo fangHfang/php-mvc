@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_PATH}user.css">
+    <link rel="stylesheet" href="{CSS_PATH}public.css">
+    <link rel="icon" href="{IMG_PATH}logo.png" type="images/x-icon">
+    <script src="{JS_PATH}rem.js"></script>
+</head>
+<body>
+<div class="back">
+    <a onclick="history.back()"> ←</a>
+    <a>编辑个人资料</a>
+</div>
+<form action="index.php?m=index&c=personal&a=update">
+<div class="thumb">
+    <img src="{$data['picture']}" alt="" class="timg">
+</div>
+<div class="member">
+    <label for="name">会员名</label>
+    <input type="text" id="name" class="name" name="name" value="{$data['username']}">
+</div>
+<div class="member">
+    <label for="sex">性别</label>
+    <input type="text" id="sex" class="sex" name="sex" value="{$data['sex']}">
+</div>
+
+<div class="member">
+    <label for="phone">手机号</label>
+    <input type="text" id="phone" class="tname" name="phone" value="{$data['phone']}">
+</div>
+    <input type="submit" class="achieve" value="完成">
+</form>
+</body>
+</html>

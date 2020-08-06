@@ -1,0 +1,30 @@
+{if isset($notice)}
+<style>
+    .notice{
+        width: 100vw;
+        height: 94vh;
+        position: absolute;
+        top:6vh;
+        left:0;
+    }
+    .notice span{
+        display: block;
+        width: 8rem;
+        border: 0.01rem solid #999999;
+        padding:1rem 0;
+        margin:0 auto;
+        background: #fff;
+        font-size: 0.5rem;
+        text-align: center;
+        font-weight:600;
+        color: red;
+    }
+</style>
+<div class="notice"> <span>{$notice}</span></div>
+<script>
+    let close=document.querySelector(".notice");
+    close.onclick=function(){
+        this.style.display="none";
+    }
+</script>
+{/if}

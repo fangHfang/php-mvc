@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="{CSS_PATH}person.css">
+    <link rel="stylesheet" href="{CSS_PATH}public.css">
+    <link rel="icon" href="{IMG_PATH}logo.png" type="images/x-icon">
+    <script src="{JS_PATH}rem.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="head0">
+        <span class="head1">&#xe600;</span>
+        <span class="head2">&#xe635;</span>
+    </div>
+    <div class="head3">
+        <a href="index.php?m=index&c=personal&a=setting">
+            <img src="{$picture['picture']}" alt="">
+        </a>
+        <span>{$phone}</span>
+        <em>海草海草</em>
+    </div>
+    <div class="tit">
+        <div class="">
+            <em>&#xe609;</em>
+            <span><br>待付款</span>
+        </div>
+        <div class="">
+            <em>&#xe604;</em>
+            <span><br>待收货</span>
+        </div>
+        <div class="">
+            <em>&#xe63d;</em>
+            <span><br>待评价</span>
+        </div>
+        <div class="">
+            <em>&#xe64c;</em>
+            <span><br>售后</span>
+        </div>
+        <div class="">
+            <em>&#xe6dd;</em>
+            <span><br>全部订单</span>
+        </div>
+    </div>
+</div>
+
+<!-- 热卖商品 -->
+<div class="hot">
+    <div class="main_up">
+        <div class="main_tit">
+            <div class="main_tit_box">
+                <img src="images/Screenshot_2018-02-24-14-12-51-75_03.png" alt="">
+            </div>
+            <div class="main_tit_box1">
+                <p>猜你喜欢</p>
+            </div>
+            <div class="main_tit_box2">
+                <p>更多</p>
+            </div>
+        </div>
+    </div>
+    <div class="hot_down">
+        <div class="hot_down_img">
+            <img src="images/Screenshot_2018-02-24-14-12-51-75_07.png" alt="">
+            <p>爽食莆仙斋—芡实&nbsp;（10斤）</p>
+            <h1>700.00元</h1>
+            <div class="hot_down_img1">
+                <span>&#xe618;</span>
+            </div>
+        </div>
+        <div class="hot_down_img">
+            <img src="images/7_20.png" alt="">
+            <p>爽食莆仙斋—芡实&nbsp;（10斤）</p>
+            <h1>700.00元</h1>
+            <div class="hot_down_img1">
+                <span>&#xe618;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 加盟推荐 -->
+<div class="tuijian">
+    <div class="main_up">
+        <div class="main_tit">
+            <div class="main_tit_box">
+                <img src="images/9_03.png" alt="">
+            </div>
+            <div class="main_tit_box1">
+                <p>喜欢更多</p>
+            </div>
+            <div class="main_tit_box2">
+                <p>更多</p>
+            </div>
+        </div>
+    </div>
+    <div class="hot_down">
+        <div class="hot_down_img">
+            <img src="images/8_03.png" alt="">
+            <p>爽食莆仙斋—芡实&nbsp;（10斤）</p>
+            <h1>700.00元</h1>
+            <div class="hot_down_img1">
+                <span>&#xe618;</span>
+            </div>
+        </div>
+        <div class="hot_down_img">
+            <img src="images/7_06.png" alt="">
+            <p>爽食莆仙斋—芡实&nbsp;（10斤）</p>
+            <h1>700.00元</h1>
+            <div class="hot_down_img1">
+                <span>&#xe618;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer0"></div>
+{include file="index/footer.html"}
+<script>
+    let phone=document.querySelector(".head3 span");
+    localStorage.phone=phone.innerHTML;
+</script>

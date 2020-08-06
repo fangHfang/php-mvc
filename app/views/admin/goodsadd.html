@@ -1,0 +1,105 @@
+{include file="admin/header.html"}
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加类型</strong></div>
+    <div class="body-content">
+
+        <form method="post" class="form-x" action="index.php?m=admin&c=goods&a=goodsaddcheck">
+
+            <div class="form-group">
+                <div class="label">
+                    <label>名称：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="gname" data-validate="required:请输入商品名"/>
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>价格：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="gprice" data-validate="required:请输入价格"/>
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>照片：</label>
+                </div>
+                <div class="field">
+                    <input type="file" id="url1"  class="input tips" style="width:25%; float:left;" value=""
+                           data-toggle="hover" data-place="right" data-image=""/>
+                    <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"
+                           style="float:left;" data-url="index.php?m=admin&c=goods&a=upload">
+                    <div class="tipss">图片尺寸：500*500</div>
+                    <input type="hidden" name="gthumb" id="hidden">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="label">
+                    <label>多图：</label>
+                </div>
+                <div class="field">
+                    <input type="file" id="url2"  class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image="" multiple/>
+                    <input type="button" class="button bg-blue margin-left" id="image2" value="+ 浏览上传" style="float:left;" data-url="index.php?m=admin&c=goods&a=upload">
+                    <div class="tipss">图片尺寸：500*500</div>
+                    <input type="hidden" name="gpicture" id="hidden2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>描述：</label>
+                </div>
+                <div class="field">
+                    <textarea class="input w50" name="gdescrip" data-validate="required:请输入描述"></textarea>
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>所属分类：</label>
+                </div>
+                <div class="field">
+                    <select name="tid" id="" class="input w50">
+                        {foreach $types $v}
+                        <option value="{$v['tid']}">{$v['tname']}</option>
+                        {/foreach}
+                    </select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>推荐：</label>
+                </div>
+                <div class="field">
+                    推荐<input type="radio" value="1" name="grecommend"/>
+                    不推荐<input type="radio" value="0" name="grecommend" checked/>
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script src="{JS_PATH}/upload.js"></script>
+</body>
+</html>
